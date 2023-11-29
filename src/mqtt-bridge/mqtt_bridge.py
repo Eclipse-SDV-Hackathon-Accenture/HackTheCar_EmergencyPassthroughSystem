@@ -37,11 +37,11 @@ def callback(topic_name, msg, time):
 if __name__ == "__main__":
     ecal_core.initialize(sys.argv, "MQTT Bridge")
 
-    sub = StringSubscriber("hello_mqtt")
+    sub = StringSubscriber("smallcar")
 
     mqttClient.on_connect = on_connect
     mqttClient.on_message = on_message
-    mqttClient.username_pw_set("", "")
+    mqttClient.username_pw_set("sdv_ecal", "SDV_ecal123")
     mqttClient.tls_set()
     mqttClient.connect("5e57e5cfb02f468ba5e49adade286f4b.s1.eu.hivemq.cloud", 8883, 60)
 
