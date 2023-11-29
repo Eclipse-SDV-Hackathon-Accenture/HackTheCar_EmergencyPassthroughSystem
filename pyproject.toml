@@ -8,7 +8,9 @@ license = {file = "LICENSE.txt"}
 version = "0.1.0"
 dependencies = [
     "datatypes_collection @ git+https://github.com/eclipse-ecal/protobuf-datatypes-collection@main",
-    "paho-mqtt"
+    "paho-mqtt",
+    "geopy",
+    "pandas"
 ]
 
 [project.scripts]
