@@ -13,13 +13,22 @@ def move_away(config):
     car.throttle = config['throttle']
     
     for i in range(0,20):
-        if (config['direction'] == "right"):  
+        if (config['direction'] == "right"):             
             if (i > 5):
-                car.steering = 0.0
+                print("move to normal")
+                if(car.steering < 0):
+                    car.steering += 0.1                
             else:
-                car.steering = 0.0
+                print("move right")
+                car.steering -= 0.1
         else:
-            car.steering += 0.1
+            if (i > 5):
+                print("move to normal")
+                if(car.steering > 0):
+                    car.steering -= 0.1  
+            else:
+                print("move left")
+                car.steering += 0.1
         time.sleep(0.5)
 
     car.throttle = 0.0
