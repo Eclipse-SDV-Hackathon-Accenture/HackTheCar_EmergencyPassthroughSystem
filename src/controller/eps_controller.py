@@ -26,16 +26,16 @@ def callback(topic_name, msg, time_stamp):
     # Calculate the current time based on call_count
     current_time = start_time + timedelta(seconds=call_count)
 
-    coords_bc = (msg.latitude, msg.longitude)
-    coords_sc = (48.117599, 11.602926)
-    dist = geopy.distance.geodesic(coords_bc, coords_sc).m
+    coords_big_car = (msg.latitude, msg.longitude)
+    coords_small_car = (48.117599, 11.602926)
+    dist = geopy.distance.geodesic(coords_big_car, coords_small_car).m
 
     if dist < 10:
         print("---------TATÜTATA-----------")
 
         pub.send('{"move": "on"}')
         time.sleep(0.1)
-    else: 
+    else:
         print("Distance to Big Car: ", dist)
 
     # Append new data to DataFrame
@@ -66,7 +66,7 @@ if __name__ == "__main__":
         print("\nSaving data to 'distances.csv'...")
         distances.to_csv('distances.csv', index=False)
         print("Data saved. Exiting.")
-    
+
     finally:
         # Finalize eCAL API
         ecal_core.finalize()

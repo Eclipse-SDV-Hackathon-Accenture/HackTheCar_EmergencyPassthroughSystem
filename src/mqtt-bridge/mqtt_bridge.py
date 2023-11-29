@@ -12,18 +12,18 @@ from ecal.core.subscriber import StringSubscriber
 
 mqttClient = mqtt.Client("", clean_session=True, userdata=None, protocol=mqtt.MQTTv31)
 
-def on_connect(mqttClient, userdata, flags, rc):
+def on_connect(mqttClient, userdata, flags, returnCode):
     """
     Callback method 
     """
 
-    print("Connected with result code " + str(rc))
+    print("Connected with result code " + str(returnCode))
     mqttClient.subscribe("#")
 
 
 def on_message(mqttClient, userdata, msg):
     print(msg.topic + " " + str(msg.payload))
-    
+
     pub = StringPublisher("MQTT_Message")
     pub.send(str(msg.payload))
 

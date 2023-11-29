@@ -10,7 +10,7 @@ car = NvidiaRacecar()
 
 def move_away(config):
     print("move away")
-    car.throttle = config['throttle']  
+    car.throttle = config['throttle']
     
     for i in range(0,20):
         if (config['direction'] == "right"):  
