@@ -16,7 +16,7 @@ def on_connect(client, userdata, flags, rc):
 
     # Subscribing in on_connect() means that if we lose the connection and
     # reconnect then subscriptions will be renewed.
-    client.subscribe("smallcar")
+    client.subscribe("EPS_Move")
     print("config readed - throttle:" + str(config['throttle']) + ", direction:" + config['direction'])
     
 # The callback for when a PUBLISH message is received from the server.
