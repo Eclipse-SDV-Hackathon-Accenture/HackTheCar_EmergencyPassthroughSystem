@@ -2,4 +2,4 @@
 
 Architecture Diagram:
 
-![hackathon_architecture drawio](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/7806017/a8935fea-3d37-457b-9c66-b35f6c02ab85)
+![hackathon_architecture](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/7806017/c0a85f3d-268b-4035-a3ae-340ed8430583)
