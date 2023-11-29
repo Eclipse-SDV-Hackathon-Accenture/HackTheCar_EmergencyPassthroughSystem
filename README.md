@@ -1,6 +1,10 @@
 # Emergency Passthrough System
 
-The Emergency Passthrough System (EPS) is a revolutionary system designed to enhance the response times of emergency vehicles in urban areas. By integrating with autonomous vehicle technology, EPS ensures that autonomous vehicles receive real-time signals from approaching emergency vehicles, enabling them to pull over safely and quickly, thus clearing the path for emergencies.
+The Emergency Passthrough System (EPS) is a revolutionary system designed to
+enhance the response times of emergency vehicles in urban areas. By integrating
+with autonomous vehicle technology, EPS ensures that autonomous vehicles receive
+real-time signals from approaching emergency vehicles, enabling them to pull over
+safely and quickly, thus clearing the path for emergencies.
 
 ## Table of Content
 
@@ -19,15 +23,20 @@ For the EPS system, we designed the system with the following architecture
 
 ![eps_system](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/20866800/9e353710-acb6-45b7-b0aa-7997b84407dd)
 
-With this architecture we have multiple components, that are connected in the modular way using eCAL middleware.
+With this architecture we have multiple components, that are connected in the
+modular way using eCAL middleware.
 
 EPS consists of two main components:
 
 * EPS Controller
-  This component subscribes to the ROS Global Position topic to receive location data and uses eCAL for communication. It calculates the distance of each vehicle from a set location and determines whether to send a signal to autonomous vehicles to move aside.
+  This component subscribes to the ROS Global Position topic to receive location
+  data and uses eCAL for communication. It calculates the distance of each vehicle
+  from a set location and determines whether to send a signal to autonomous vehicles
+  to move aside.
 
 * MQTT Bridge
-  This application bridges the communication between eCAL and MQTT, transmitting messages received from the EPS Controller to an MQTT broker.
+  This application bridges the communication between eCAL and MQTT, transmitting
+  messages received from the EPS Controller to an MQTT broker.
 
 ## Prerequisites
 
@@ -44,7 +53,7 @@ EPS consists of two main components:
 git clone https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem 
 
 # Change directory
-cd HackTheCar_EmergencyPassthroughSystem 
+cd HackTheCar_EmergencyPassthroughSystem
 
 # Creating python virtual enviroment
 python -m venv .venv
@@ -69,7 +78,10 @@ pip install .
   python src/controller/eps_controller.py
   ```
 
-  This script initializes a subscriber that listens to the "ROSGlobalPosition" topic from eCAL and a publisher that sends signal after calculation to the MQTT Bridge compoent, that works as a Vehicle to Vehicle communication (V2V) to the small autonomous car.
+  This script initializes a subscriber that listens to the "ROSGlobalPosition"
+  topic from eCAL and a publisher that sends signal after calculation to the MQTT
+  Bridge compoent, that works as a Vehicle to Vehicle communication (V2V) to the
+  small autonomous car.
 
 * MQTT Bridge
   Run the MQTT Bridge:
@@ -78,15 +90,19 @@ pip install .
   python src/mqtt-bridge/mqtt_bridge.py
   ```
 
-  MQTT bridge componet act as vehicle to vehicle communication software, that interacts with eCAL and MQTT broker, where the small autonomous car receives the trigger to create rescue lane.
-  This software subscribes particular signal from eCAL and forwards directly to the provided MQTT broker.
+  MQTT bridge componet act as vehicle to vehicle communication software, that
+  interacts with eCAL and MQTT broker, where the small autonomous car receives
+  the trigger to create rescue lane.
+  This software subscribes particular signal from eCAL and forwards directly to
+  the provided MQTT broker.
 
 ## System Flow
 
 The EPS Controller receives GPS data from autonomous vehicles.
 It calculates the distance to a predefined emergency location.
-If an autonomous vehicle is within a specified range, it sends a signal to that vehicle to move aside.
-The MQTT Bridge forwards these messages to the MQTT broker for broader dissemination or integration with other systems.
+If an autonomous vehicle is within a specified range, it sends a signal to that
+vehicle to move aside. The MQTT Bridge forwards these messages to the MQTT broker
+for broader dissemination or integration with other systems.
 
 ## License
 
