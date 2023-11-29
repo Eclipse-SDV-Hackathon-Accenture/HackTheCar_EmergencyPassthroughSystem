@@ -21,7 +21,9 @@ safely and quickly, thus clearing the path for emergencies.
 
 For the EPS system, we designed the system with the following architecture
 
-![eps_system](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/20866800/9e353710-acb6-45b7-b0aa-7997b84407dd)
+<p align="center">
+  <img src="https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/20866800/9e353710-acb6-45b7-b0aa-7997b84407dd" alt="eps_system"/>
+</p>
 
 With this architecture we have multiple components, that are connected in the
 modular way using eCAL middleware.
