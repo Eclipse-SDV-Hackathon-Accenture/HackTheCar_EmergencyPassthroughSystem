@@ -1,11 +1,12 @@
-import pandas as pd
-import geopy.distance
-import time
 import sys
+import time
+from datetime import datetime, timedelta
+
 import ecal.core.core as ecal_core
+import geopy.distance
+import pandas as pd
 from ecal.core.subscriber import ProtoSubscriber
 from ros.sensor_msgs.NavSatFix_pb2 import NavSatFix
-from datetime import datetime, timedelta
 
 # Initialize the DataFrame outside of the callback
 distances = pd.DataFrame(columns=['time', 'latitude', 'longitude', 'distance'])
