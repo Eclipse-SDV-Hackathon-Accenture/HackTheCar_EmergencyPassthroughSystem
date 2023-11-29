@@ -17,7 +17,7 @@ The Emergency Passthrough System (EPS) is a revolutionary system designed to enh
 
 For the EPS system, we designed the system with the following architecture
 
-![hackathon_architecture](https://raw.githubusercontent.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/main/resources/eps_system.jpg)
+![eps_system](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/20866800/9e353710-acb6-45b7-b0aa-7997b84407dd)
 
 With this architecture we have multiple components, that are connected in the modular way using eCAL middleware.
 
