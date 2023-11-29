@@ -10,7 +10,9 @@ dependencies = [
     "datatypes_collection @ git+https://github.com/eclipse-ecal/protobuf-datatypes-collection@main",
     "paho-mqtt",
     "geopy",
-    "pandas"
+    "pandas",
+    "adafruit-circuitpython-servokit",
+    "traitlets"
 ]
 
 [project.scripts]
