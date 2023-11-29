@@ -117,7 +117,7 @@ if __name__ == "__main__":
             time.sleep(0.5)
 
     except KeyboardInterrupt:
-        if args.record_results:
+        if args.record_result:
             # Save DataFrame to CSV when KeyboardInterrupt occurs
             print("\nSaving data to 'distances.csv'...")
             distances.to_csv('distances.csv', index=False)
