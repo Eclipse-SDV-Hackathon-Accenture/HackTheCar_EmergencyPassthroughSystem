@@ -6,6 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     image: emergency-passthrough-system:0.1.0
+    platform: linux/amd64
 
     volumes:
       - ./:/opt/workspace
