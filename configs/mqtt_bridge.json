@@ -1,0 +1,6 @@
+{
+  "mqtt_host": "5e57e5cfb02f468ba5e49adade286f4b.s1.eu.hivemq.cloud",
+  "mqtt_port": 8883,
+  "mqtt_user": "sdv_ecal",
+  "mqtt_password": "SDV_ecal123"
+}
