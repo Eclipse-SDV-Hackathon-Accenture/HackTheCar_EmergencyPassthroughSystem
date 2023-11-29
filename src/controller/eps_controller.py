@@ -82,8 +82,10 @@ if __name__ == "__main__":
         description='Core Logic Algorithm for Emergency Passthrough System',
         add_help=True)
 
-    parser.add_argument('--config-file', '-cf', type=argparse.FileType('r', encoding='UTF-8'), required=True)
-    parser.add_argument('--record-result', '-r', action='store_true', default=False)
+    parser.add_argument('--config-file', '-cf', type=argparse.FileType('r', encoding='UTF-8'), required=True,
+                        help="Path to config file (JSON)")
+    parser.add_argument('--record-result', '-r', action='store_true', default=False,
+                        help="Boolean flag to record position into .csv file at the end of the program")
 
     args = parser.parse_args()
 

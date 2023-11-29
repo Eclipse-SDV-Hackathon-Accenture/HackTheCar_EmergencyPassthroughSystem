@@ -71,17 +71,49 @@ pip install .
 
 ## Usage
 
-* EPS Controller\
-  Run the EPS Controller:
-
-  ```shell
-  python src/controller/eps_controller.py
-  ```
+* EPS Controller
 
   This script initializes a subscriber that listens to the "ROSGlobalPosition"
   topic from eCAL and a publisher that sends signal after calculation to the MQTT
   Bridge compoent, that works as a Vehicle to Vehicle communication (V2V) to the
   small autonomous car.
+
+  Run the EPS Controller:
+
+  ```shell
+  # Observing Possibilities
+  python src/controller/eps_controller.py --help
+
+  # Help information
+  usage: EmergencyPassthroughSystem [-h] --config-file CONFIG_FILE [--record-result]
+
+  Core Logic Algorithm for Emergency Passthrough System
+
+  optional arguments:
+    -h, --help            show this help message and exit
+    --config-file CONFIG_FILE, -cf CONFIG_FILE
+    --record-result, -r
+  ```
+
+  The script requires a mandatory argument for the path to the config file. The
+  configuration file will be used to configure the distance threshold and position
+  of the small car in latitude and longitude value.
+
+  ```json
+  {
+    "longitude": 11.602926,
+    "latitude": 48.117599,
+    "distance_threshold": 10.0
+  }
+  ```
+
+  The typical usage to the script is following:
+
+  ```shell
+  python eps_controller.py --config-file <path/to/config/file> -r
+  ```
+
+  
 
 * MQTT Bridge
   Run the MQTT Bridge:
