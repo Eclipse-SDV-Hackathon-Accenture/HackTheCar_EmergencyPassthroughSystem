@@ -117,6 +117,7 @@ pip install .
 
 
 * MQTT Bridge
+  
   MQTT bridge componet act as vehicle to vehicle communication software, that
   interacts with eCAL and MQTT broker, where the small autonomous car receives
   the trigger to create rescue lane.
