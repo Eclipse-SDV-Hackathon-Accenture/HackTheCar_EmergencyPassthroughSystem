@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emergency-passthrough-system"
+license = {file = "LICENSE.txt"}
+version = "0.1.0"
+dependencies = [
+    "datatypes_collection @ git+https://github.com/eclipse-ecal/protobuf-datatypes-collection@main",
+    "paho-mqtt"
+]
+
+[project.scripts]
+#application    = "application:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
