@@ -115,20 +115,48 @@ pip install .
   python eps_controller.py --config-file <path/to/config/file> -r
   ```
 
-  
 
 * MQTT Bridge
-  Run the MQTT Bridge:
-  
-  ```shell
-  python src/mqtt-bridge/mqtt_bridge.py
-  ```
-
   MQTT bridge componet act as vehicle to vehicle communication software, that
   interacts with eCAL and MQTT broker, where the small autonomous car receives
   the trigger to create rescue lane.
   This software subscribes particular signal from eCAL and forwards directly to
   the provided MQTT broker.
+
+  Run the MQTT Bridge:
+  
+  ```shell
+  # Observing Possibilities
+  python src/mqtt-bridge/mqtt_bridge.py --help
+
+  # Help Information
+  usage: MQTT-eCAL Bridge [-h] --config-file CONFIG_FILE
+
+  Bridge application between eCAL and MQTT
+
+  optional arguments:
+    -h, --help            show this help message and exit
+    --config-file CONFIG_FILE, -cf CONFIG_FILE
+                          Path to config file (JSON)
+  ```
+
+  The script requires a mandatory argument for the path to the config file. The 
+  example of the config file can be seen as following
+
+  ```json
+  {
+    "mqtt_host": "broker.some.host.com",
+    "mqtt_port": 8883,
+    "mqtt_user": "some_user",
+    "mqtt_password": "some_password"
+  }
+  ```
+
+  The typical usage to the script is following:
+
+  ```shell
+  python mqtt_bridge.py --config-file <path/to/config/file>
+  ```
 
 ## System Flow
 
