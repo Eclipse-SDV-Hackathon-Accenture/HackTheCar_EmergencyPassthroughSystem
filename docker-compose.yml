@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  eps:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: emergency-passthrough-system:0.1.0
+
+    volumes:
+      - ./:/opt/workspace
