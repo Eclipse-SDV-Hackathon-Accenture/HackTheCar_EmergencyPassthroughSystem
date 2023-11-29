@@ -20,15 +20,5 @@ WORKDIR /opt
 RUN wget https://github.com/eclipse-ecal/ecal/releases/download/v5.12.1/ecal5-5.12.1-1focal-cp38-cp38-linux_x86_64.whl
 
 RUN pip install paho-mqtt ecal5-5.12.1-1focal-cp38-cp38-linux_x86_64.whl
-#RUN wget https://github.com/eclipse-ecal/ecal/releases/download/v5.12.1/ecal5-5.12.1-1focal-cp39-cp39-linux_x86_64.whl
-
-#RUN wget https://github.com/eclipse-ecal/ecal/releases/download/v5.12.1/ecal5-5.12.1-1jammy-cp310-cp310-linux_x86_64.whl
-
-# Installing pip packages
-#RUN pip install ecal5-5.12.1-1jammy-cp310-cp310-linux_x86_64.whl
-#RUN pip install ecal5-5.12.1-1focal-cp39-cp39-linux_x86_64.whl
-
-# Cleaning up
-#RUN rm ecal5-5.12.1-1jammy-cp310-cp310-linux_x86_64.whl
 
 RUN apt autoremove
