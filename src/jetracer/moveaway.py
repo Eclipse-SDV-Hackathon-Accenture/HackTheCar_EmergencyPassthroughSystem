@@ -11,13 +11,13 @@ car = NvidiaRacecar()
 def move_away(config):
     print("move away")
     car.throttle = config['throttle']
-    
+
     for i in range(0,20):
-        if (config['direction'] == "right"):             
+        if (config['direction'] == "right"):
             if (i > 5):
                 print("move to normal")
                 if(car.steering < 0):
-                    car.steering += 0.1                
+                    car.steering += 0.1
             else:
                 print("move right")
                 car.steering -= 0.1
@@ -25,7 +25,7 @@ def move_away(config):
             if (i > 5):
                 print("move to normal")
                 if(car.steering > 0):
-                    car.steering -= 0.1  
+                    car.steering -= 0.1
             else:
                 print("move left")
                 car.steering += 0.1
@@ -33,10 +33,7 @@ def move_away(config):
 
     car.throttle = 0.0
     car.steering = 0.0
-    
+
 with open("smallcar.config") as f:
-    config = json.load(f)  
+    config = json.load(f)
     move_away(config);
-
-
-
