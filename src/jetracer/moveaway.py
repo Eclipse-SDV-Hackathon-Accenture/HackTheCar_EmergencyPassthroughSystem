@@ -34,6 +34,6 @@ def move_away(config):
     car.throttle = 0.0
     car.steering = 0.0
 
-with open("smallcar.config") as f:
+with open("../../configs/jetracer.json") as f:
     config = json.load(f)
     move_away(config);
