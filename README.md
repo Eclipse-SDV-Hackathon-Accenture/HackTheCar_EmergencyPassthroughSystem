@@ -176,7 +176,7 @@ pip install .
   # Change directory
   cd HackTheCar_EmergencyPassthroughSystem/src/jetracer
   ```
-  The jetRacer can be configured via a json file src/jetracer/smallcar.config
+  The jetRacer can be configured via a json file configs/jetracer.json
 
    ```json
   {
