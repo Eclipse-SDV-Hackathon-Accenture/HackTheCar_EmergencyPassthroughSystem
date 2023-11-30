@@ -75,7 +75,7 @@ client.tls_set()
 client.username_pw_set("sdv_ecal","SDV_ecal123")
 client.connect("5e57e5cfb02f468ba5e49adade286f4b.s1.eu.hivemq.cloud", 8883, 60)
 
-with open("../../configs/smallcar.json") as f:
+with open("../../configs/jetracer.json") as f:
     config = json.load(f)
 
 client.loop_forever()
