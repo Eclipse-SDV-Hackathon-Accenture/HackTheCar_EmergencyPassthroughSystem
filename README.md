@@ -6,7 +6,7 @@ with autonomous vehicle technology, EPS ensures that autonomous vehicles receive
 real-time signals from approaching emergency vehicles, enabling them to pull over
 safely and quickly, thus clearing the path for emergencies.
 
-![EPS_Visual_4](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/81744567/2417029b-6524-4ac6-a4ae-09f499c639bc)
+![EPS_Visual_final](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/81744567/ea5b4ee1-089d-4d11-a187-97c3f87177ca)
 
 
 ## Table of Content
