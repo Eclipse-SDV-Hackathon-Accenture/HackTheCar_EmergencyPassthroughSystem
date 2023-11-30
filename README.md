@@ -44,6 +44,7 @@ EPS consists of two main components:
 
 * Python >= 3.8
 * [eCAL](https://eclipse-ecal.github.io/ecal/index.html)
+* jetRacer cars
 
 ## Installation
 
@@ -158,6 +159,31 @@ pip install .
   ```shell
   python mqtt_bridge.py --config-file <path/to/config/file>
   ```
+
+* JetRacer
+  The JetRacer needs to be connected to wifi. Connect to the jetRacer JupyterLab via wifi or ethernet cable (f.e. http://192.168.20.20:8888/lab?).
+
+  ```shell
+  # Clone the repository
+  git clone https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem 
+
+  # Change directory
+  cd HackTheCar_EmergencyPassthroughSystem/src/jetracer
+  ```
+  The jetRacer can be configured via a json file src/jetracer/smallcar.config
+
+   ```json
+  {
+    "direction": "right",
+    "throttle": -0.3
+  }
+  ```
+
+  ```shell
+  # Run the car
+  src/jetracer/python3 smallcar.py
+
+  Now the car is waiting for MQTT signal with the topic ***smallcar*** to move.  
 
 ## System Flow
 
