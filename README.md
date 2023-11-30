@@ -6,6 +6,9 @@ with autonomous vehicle technology, EPS ensures that autonomous vehicles receive
 real-time signals from approaching emergency vehicles, enabling them to pull over
 safely and quickly, thus clearing the path for emergencies.
 
+![EPS_Visual_4](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/81744567/2417029b-6524-4ac6-a4ae-09f499c639bc)
+
+
 ## Table of Content
 
 - [Emergency Passthrough System](#emergency-passthrough-system)
@@ -195,7 +198,7 @@ If an autonomous vehicle is within a specified range, it sends a signal to that
 vehicle to move aside. The MQTT Bridge forwards these messages to the MQTT broker
 for broader dissemination or integration with other systems.
 
-![EPS_Visual_4](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/81744567/2417029b-6524-4ac6-a4ae-09f499c639bc)
+
 
 
 
