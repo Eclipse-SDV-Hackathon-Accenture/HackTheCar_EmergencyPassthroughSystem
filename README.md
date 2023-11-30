@@ -161,6 +161,7 @@ pip install .
   ```
 
 * JetRacer
+  
   The JetRacer needs to be connected to wifi. Connect to the jetRacer JupyterLab via wifi or ethernet cable (f.e. http://192.168.20.20:8888/lab?).
 
   ```shell
@@ -182,6 +183,7 @@ pip install .
   ```shell
   # Run the car
   src/jetracer/python3 smallcar.py
+  ```
 
   Now the car is waiting for MQTT signal with the topic ***smallcar*** to move.  
 
