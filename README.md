@@ -195,6 +195,10 @@ If an autonomous vehicle is within a specified range, it sends a signal to that
 vehicle to move aside. The MQTT Bridge forwards these messages to the MQTT broker
 for broader dissemination or integration with other systems.
 
+![EPS_Visual_4](https://github.com/Eclipse-SDV-Hackathon-Accenture/HackTheCar_EmergencyPassthroughSystem/assets/81744567/2417029b-6524-4ac6-a4ae-09f499c639bc)
+
+
+
 ## License
 
 Copyright (c) 2023 - present, Lace Labs at SDV Hackathon
